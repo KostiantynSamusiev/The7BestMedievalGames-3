@@ -1,0 +1,1161 @@
+@mixin h2styleMobile {
+    font-family: 'Girassol-Regular';
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #786B55;
+}
+
+@mixin btn() {
+    position: relative;
+    width: 6rem;
+    height: 1rem;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 50%;
+    cursor: pointer;
+    background-size: 100% 200%;
+    background-position: 0% 100%;
+    color: #fff;
+    transition: 400ms;
+}
+
+@mixin btnIconDef() {
+    position: absolute;
+    width: 2rem;
+    height: .23rem;
+    border-radius: 2px;
+    background-color: #BFBDAC;
+    display: block;
+    margin: auto;
+    transition: 400ms;
+}
+
+
+.main-app {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-btn {
+    @include btn();
+    transform: rotate(0deg);
+    opacity: 1;
+}
+
+.custom-menu-toggle {
+    @include btnIconDef();
+
+    &:before {
+        @include btnIconDef();
+        content: '';
+        backface-visibility: hidden;
+        transform: rotate(0deg) translateY(10px);
+    }
+
+
+}
+
+.main-btn.active .custom-menu-toggle {
+    background-color: rgba(255, 255, 255, 0);
+
+    &:before {
+        @include btnIconDef();
+        content: '';
+        transform: rotate(45deg) translateY(0px);
+    }
+
+    &:after {
+        @include btnIconDef();
+        content: '';
+        transform: rotate(-45deg) translateY(0px);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+body {
+    background: url('../img/BACKGROUND_DARK.png');
+}
+
+.wraper {
+    overflow: hidden;
+    padding: 0 16px;
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 15px 0 20px 0;
+
+    .logo {
+        max-width: 130px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .shop-link {
+        width: 103px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .shop-link-non-active {
+        visibility: hidden;
+    }
+
+    .header-inner-links {
+        display: none;
+
+        ul {
+            li {
+                display: flex;
+                justify-content: space-around;
+
+                a {
+                    padding: 30px 0 30px 0;
+                    display: block;
+                    font-family: 'Space-Mono-Regular';
+                    text-decoration: none;
+                    font-size: 13px;
+                    line-height: 100%;
+                    text-transform: uppercase;
+                    color: #ACA59B;
+                }
+
+
+            }
+        }
+    }
+
+
+
+
+}
+
+.header-links {
+    display: none;
+    position: absolute;
+    width: 95%;
+    top: 55px;
+    background: url('../img/BACKGROUND_DARK.png') no-repeat;
+
+    ul {
+        li {
+            display: flex;
+            justify-content: space-around;
+
+            a {
+                padding: 30px 0 30px 0;
+                display: block;
+                font-family: 'Space-Mono-Regular';
+                text-decoration: none;
+                font-size: 13px;
+                line-height: 100%;
+                text-transform: uppercase;
+                color: #ACA59B;
+            }
+
+
+        }
+    }
+}
+
+.is-active {
+    display: block;
+}
+
+
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 626px;
+    width: 100%;
+    margin-bottom: 104px;
+    background: url('../img/medieval_elements_background.svg') 50% no-repeat;
+
+    h1 {
+        font-family: 'Girassol-Regular';
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 100%;
+        color: #BFBDAC;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        width: 320px;
+        font-family: 'Space-Mono-Regular';
+        font-size: 13px;
+        line-height: 19px;
+        color: #BFBDAC;
+    }
+}
+
+.medieval-games {
+
+    margin-bottom: 200px;
+
+    h2 {
+        font-family: "Girassol-Regular";
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #786B55;
+        margin-bottom: 32px;
+    }
+
+    .game {
+        border-top: 2px solid #ACA59B;
+
+        .top {
+            .game-section {
+                display: flex;
+                align-items: flex-end;
+                padding: 10px 0 10px 0;
+
+                .count {
+                    font-family: 'Space-Mono-Bold';
+                    font-size: 13px;
+                    line-height: 120%;
+                    color: #ACA59B;
+                    margin-right: 30px;
+                    margin-left: 5%;
+                }
+
+                .game-pic {
+                    width: 64px;
+                    margin-right: 30px;
+
+                    img {
+                        width: 100%;
+                        border-radius: 15px;
+                    }
+                }
+
+                .game-tittle {
+                    align-self: center;
+
+                    .name-of-game {
+                        font-family: 'Girassol-Regular';
+                        font-size: 25px;
+                        line-height: 120%;
+                        color: #ACA59B;
+                    }
+                }
+            }
+
+
+            .game-section-active {
+                border-bottom: unset;
+                padding: 13px 0 13px 0;
+
+
+                .game-tittle,
+                .game-pic {
+                    display: none;
+                }
+
+
+            }
+
+            .game:hover {
+                background-color: #786B55;
+            }
+        }
+
+
+        .top:hover {
+            background-color: #786B55;
+        }
+
+        .about-game {
+            display: none;
+
+            .gallery {
+                padding: 0 0 97px 0;
+
+                .slick-list {
+                    q: visible;
+                    padding: unset;
+                }
+
+                .slick-slide {
+                    margin: 0 15px 0 0;
+                }
+
+                .slick-slide {
+                    img {
+                        border-radius: 20px;
+                    }
+                }
+
+                .slick-next {
+                    right: 25px;
+                    top: unset;
+                    bottom: 30px;
+                }
+
+                .slick-next::before {
+                    font-family: "FontAwesome", "Font Awesome 5 Brands", "Font Awesome 6 Free";
+                    content: "\f105";
+                    font-size: 30px;
+                    color: #ACA59B;
+
+                }
+
+                .slick-prev {
+                    left: unset;
+                    right: 80px;
+                    top: unset;
+                    z-index: 2;
+                    bottom: 30px;
+                }
+
+                .slick-prev::before {
+                    font-family: "FontAwesome", "Font Awesome 5 Brands", "Font Awesome 6 Free";
+                    content: "\f104";
+                    font-size: 30px;
+                    color: #ACA59B;
+                }
+
+                .slick-dots {
+                    text-align: end;
+                    bottom: 60px;
+
+                    li {
+                        margin: 0 2px;
+
+                        button:before {
+                            content: "";
+                            width: 20px;
+                            height: 3px;
+                            background-color: #ACA59B;
+                            // color: white;
+                        }
+                    }
+
+                    .slick-active {
+
+                        li {
+                            width: 10px;
+
+                            button:before {
+                                content: "";
+                                width: 20px;
+                                height: 3px;
+                                background-color: #ACA59B;
+                                // color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .game-info {
+            position: relative;
+
+            .game-relative-pic {
+                position: absolute;
+                top: -160px;
+                left: 5%;
+                border-radius: 21px;
+
+                img {
+                    border-radius: 20px;
+                    height: 128px;
+                }
+            }
+        }
+
+        .is-active {
+            font-family: 'Space-Mono-Regular';
+            display: block;
+            font-size: 13px;
+            line-height: 19px;
+        }
+
+        .name-of-game {
+            font-family: 'Girassol-Regular';
+            font-weight: 400;
+            font-size: 45px;
+            line-height: 120%;
+            color: #ACA59B;
+        }
+
+        .type-of-game {
+            font-family: 'Space-Mono-Bold';
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 120%;
+            color: #ACA59B;
+        }
+
+        .discription {
+            font-family: 'Space-Mono-Bold';
+            font-size: 13px;
+            line-height: 19px;
+            text-transform: capitalize;
+            color: #ACA59B;
+            margin-bottom: 30px;
+        }
+
+        .game-rules {
+            display: flex;
+            justify-content: space-between;
+            text-transform: uppercase;
+            align-items: center;
+            font-size: 13px;
+            line-height: 19px;
+            text-transform: uppercase;
+            font-family: 'Space-Mono-Regular';
+            color: #ACA59B;
+            margin-bottom: 30px;
+
+            div {
+                text-align: center;
+                border-right: 1px solid #ACA59B;
+                width: 33%;
+                padding: 5px 0 5px 0;
+            }
+
+            div:first-child {
+                border-left: 1px solid #ACA59B;
+            }
+        }
+
+        .how-to-play {
+            font-family: 'Space-Mono-Regular';
+            color: #ACA59B;
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            p:last-of-type {
+                margin-bottom: 50px;
+            }
+
+
+        }
+
+        .game-link {
+            text-align: center;
+            display: block;
+            padding: 23px 20px 23px 20px;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            background: url(../img/link-btn.svg) 50% 100% / contain no-repeat;
+            font-size: 16px;
+            line-height: 100%;
+            font-family: 'Almendra-Regular';
+            margin-bottom: 60px;
+        }
+
+    }
+
+    .game:last-child {
+        border-bottom: 2px solid #ACA59B;
+    }
+
+
+}
+
+.deusLoVult {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 350px;
+    margin: 0 auto;
+    margin-bottom: 194px;
+
+
+    .game-pic-first {
+        text-align: end;
+        height: 183px;
+        width: 100%;
+        margin-bottom: 30px;
+
+        img {
+            border-radius: 20px;
+            height: 100%;
+        }
+    }
+
+    .game-pic-second {
+        width: 50%;
+
+        img {
+            object-fit: cover;
+            width: 165px;
+            height: 333px;
+            border-radius: 10px;
+        }
+
+    }
+
+    .game-about {
+
+        width: 50%;
+
+        h3 {
+            font-family: 'Girassol-Regular';
+            font-size: 30px;
+            line-height: 120%;
+            text-transform: uppercase;
+            color: #BFBDAC;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: 'Almendra-Regular';
+            font-size: 13px;
+            line-height: 17px;
+            color: #BFBDAC;
+        }
+    }
+}
+
+.recomended {
+    margin-bottom: 245px;
+
+    h2 {
+        @include h2styleMobile();
+        margin-bottom: 32px;
+    }
+
+    .games-container {
+
+
+        .game {
+            display: flex;
+            border-top: 1px solid #ACA59B;
+
+
+            a {
+                text-decoration: none;
+                color: #ACA59B;
+                padding: 28px 0 28px 15%;
+
+                .name-of-game {
+                    font-family: 'Girassol-Regular';
+                    font-weight: 400;
+                    font-size: 35px;
+                    line-height: 120%;
+                }
+
+                .type {
+                    font-family: 'Space-Mono-Regular';
+                }
+
+
+            }
+        }
+
+        .game:last-child {
+            border-bottom: 1px solid #ACA59B;
+        }
+
+        .game:hover {
+            background: url('../img/game-link-background.svg');
+        }
+    }
+}
+
+.footer {
+    position: relative;
+
+    .shop-section {
+        margin-bottom: 100px;
+
+        h2 {
+            font-family: 'Girassol-Regular';
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 100%;
+            color: #ACA59B;
+            margin-bottom: 56px;
+        }
+
+        .buy-link {
+            display: block;
+            padding: 23px 50px 23px 50px;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            background: url('../img/link-btn.svg') no-repeat;
+        }
+    }
+
+
+    .info-box {
+        margin-bottom: 44px;
+
+        h3 {
+            font-family: 'Girassol-Regular';
+            font-size: 20px;
+            line-height: 170%;
+            color: #ACA59B;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .about-links {
+            li {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    font-family: 'Space-Mono-Regular';
+                    font-size: 13px;
+                    line-height: 170%;
+                    text-transform: lowercase;
+                    text-decoration: none;
+                    color: #ACA59B;
+                }
+            }
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        bottom: 100px;
+        right: 15px;
+    }
+
+    .footer-links {
+        padding: 20px 0 30px 0;
+        border-top: 1px solid #ACA59B;
+
+        ul {
+            display: none;
+
+            li {
+
+                display: flex;
+                justify-content: space-between;
+
+                a {
+                    padding: 30px 0 30px 0;
+                    display: block;
+                    font-family: 'Space-Mono-Regular';
+                    text-decoration: none;
+                    font-size: 13px;
+                    line-height: 100%;
+                    text-transform: uppercase;
+                    color: #ACA59B;
+                }
+
+
+            }
+
+
+        }
+
+        p {
+            font-family: 'Space-Mono-Regular';
+            text-decoration: none;
+            font-size: 13px;
+            line-height: 100%;
+            text-transform: uppercase;
+            color: #ACA59B;
+        }
+    }
+}
+
+
+@media (min-width: 767px) {
+
+    .wraper {
+        padding: 0 35px;
+    }
+
+    .main-info {
+        margin-bottom: 237px;
+        background: url(../img/medieval_elements_background.svg) 48% 50%/cover no-repeat;
+
+        h1 {
+            font-size: 100px;
+        }
+
+        h3 {
+            width: 630px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    .medieval-games {
+        .game {
+            .top {
+
+                .game-section {
+                    .game-pic {
+                        margin-right: 60px;
+                        width: 104px;
+                    }
+
+                    .game-tittle {
+                        .name-of-game {
+
+                            font-size: 45px;
+
+                        }
+                    }
+                }
+
+                .game-section-active {
+                    padding: 25px 0 25px 0;
+                }
+            }
+
+            .about-game {
+                .game-info {
+                    height: 600px;
+                    display: flex;
+                    flex-flow: wrap;
+                    flex-direction: column;
+                    align-content: space-between;
+                    width: 100%;
+
+                    .type-of-game,
+                    .name-of-game,
+                    .discription,
+                    .game-rules,
+                    .how-to-play {
+                        width: 47%;
+                    }
+
+                    .game-relative-pic {
+                        top: -230px;
+
+                        img {
+                            height: 214px;
+                        }
+                    }
+                }
+
+                .type-of-game {
+                    margin-bottom: 15px;
+                }
+
+                .name-of-game {
+                    margin-bottom: 40px;
+                }
+
+                .how-to-play {
+                    margin-top: 60px;
+                }
+
+                .how-to-play {
+                    order: 2;
+                }
+
+                .buy-link {
+                    order: 1;
+                }
+
+                .gallery {
+                    .slick-dots {
+                        li {
+                            width: 50px;
+
+                            button:before {
+                                width: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+        }
+    }
+
+
+    .deusLoVult {
+        width: 698px;
+
+        .game-pic-first {
+            margin-right: 20%;
+            height: 100%;
+
+            img {
+                height: 217px;
+            }
+        }
+
+        .game-pic-second,
+        .about-game {
+            width: 46%;
+        }
+
+        .game-pic-second {
+            margin-right: auto;
+
+            img {
+                width: 100%;
+                height: 648px;
+            }
+        }
+    }
+
+    .recomended {
+        .games-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .game {
+                width: 50%;
+
+                a {
+                    padding: 109px 0 109px 20%;
+                }
+            }
+
+            .game:nth-of-type(3) {
+                border-right: 1px solid #ACA59B;
+                border-bottom: 1px solid #ACA59B;
+            }
+
+            .game:nth-of-type(1) {
+                border-right: 1px solid #ACA59B;
+            }
+        }
+
+
+
+    }
+
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+
+        .shop-section {
+            width: 100%;
+
+            h2 {
+                width: 50%;
+                font-size: 50px;
+            }
+        }
+
+        .info-box {
+            width: 50%;
+        }
+
+        .arrow {
+            cursor: pointer;
+            position: absolute;
+            bottom: 100px;
+            right: 30px;
+        }
+
+        .footer-links {
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 0 10px 0;
+
+            ul {
+                display: block;
+                width: 40%;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (min-width: 1079px) {
+
+    .wraper {
+        padding: 0 100px;
+    }
+
+    .header-container {
+        align-items: baseline;
+
+        .logo {
+            max-width: 215px;
+        }
+
+        .header-inner-links {
+            display: block;
+            width: 50%;
+        }
+
+        .main-app {
+            display: none;
+        }
+
+        .shop-link {
+            width: 155px;
+        }
+    }
+
+    .main-info {
+        background: url(../img/medieval_elements_background.svg) 50% no-repeat;
+    }
+
+
+    .medieval-games {
+
+        h2 {
+            font-size: 60px;
+        }
+
+        .game {
+            .top {
+                .game-section {
+
+                    .count {
+                        font-size: 16px;
+                    }
+
+                    .game-pic {
+                        margin-right: 140px;
+                        width: 130px;
+                    }
+
+                    .game-tittle {
+                        .name-of-game {
+                            font-size: 65px;
+                        }
+
+                        .type-of-game {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+
+            }
+
+            .about-game {
+                height: 1500px;
+
+                .gallery {
+                    padding: 0 0 65px 0;
+
+                    .slick-prev,
+                    .slick-next {
+                        bottom: 0;
+                        bottom: -25px;
+                    }
+
+                    .slick-dots {
+                        bottom: 10px;
+
+                        li {
+                            width: 70px;
+                            margin: 0 5px;
+
+                            button:before {
+                                width: 70px;
+                            }
+                        }
+                    }
+                }
+
+                .game-info {
+                    margin-left: auto;
+                    width: 70%;
+                    height: 650px;
+
+                    h3 {
+                        font-size: 65px;
+                    }
+
+                    .game-relative-pic {
+                        top: -130px;
+                        left: -237px;
+
+                        img {
+                            height: 217px;
+                            border-radius: 20px;
+                        }
+                    }
+
+                    .type-of-game {
+                        font-size: 20px;
+                    }
+
+                    .name-of-game {
+                        font-size: 65px;
+                    }
+
+                    .discription {
+                        font-size: 16px;
+                        line-height: 30px;
+                    }
+
+                    .game-rules {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+
+                    .how-to-play {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+
+                    .game-link {
+                        background: url(../img/link-btn.svg) 100%/contain no-repeat;
+                        padding: 34px 0;
+                        margin: 2px 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .deusLoVult {
+        flex-direction: row;
+        width: 100%;
+
+        .game-about {
+            order: 1;
+            width: 77%;
+            text-align: end;
+
+            h3 {
+                font-size: 130px;
+                line-height: 120%;
+            }
+
+            p {
+                line-height: 21px;
+                text-align: start;
+                font-size: 16px;
+                margin-left: auto;
+                width: 350px;
+            }
+
+
+
+
+
+        }
+
+        .game-pic-first {
+            order: 2;
+            margin: unset;
+            width: 20%;
+            align-self: center;
+            margin-left: auto;
+        }
+
+        .game-pic-second {
+            margin-top: 70px;
+            width: 77%;
+            order: 3;
+
+            img {
+                height: 369px;
+            }
+        }
+    }
+
+    .recomended {
+        h2 {
+            font-size: 60px;
+        }
+
+        .games-container {
+            .game {
+                a {
+                    .name-of-game {
+                        font-size: 65px;
+                    }
+
+                    .type {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        .shop-section {
+            width: 50%;
+        }
+
+        .info-box {
+            width: 25%;
+
+            .about-links {
+                li {
+                    a {
+                        font-size: 16px;
+                    }
+                }
+
+            }
+        }
+
+
+        .arrow {
+            position: absolute;
+            bottom: 180px;
+        }
+
+        .footer-links {
+            ul {
+                width: 25%;
+
+                li {
+                    a {
+                        padding: 50px 0 50px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    .wraper {
+        margin: 0 auto;
+        max-width: 1600px;
+    }
+}

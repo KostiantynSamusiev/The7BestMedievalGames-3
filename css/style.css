@@ -1,0 +1,1000 @@
+.main-app {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-btn {
+  position: relative;
+  width: 6rem;
+  height: 1rem;
+  font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  border-radius: 50%;
+  cursor: pointer;
+  background-size: 100% 200%;
+  background-position: 0% 100%;
+  color: #fff;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  opacity: 1;
+}
+
+.custom-menu-toggle {
+  position: absolute;
+  width: 2rem;
+  height: 0.23rem;
+  border-radius: 2px;
+  background-color: #BFBDAC;
+  display: block;
+  margin: auto;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+.custom-menu-toggle:before {
+  position: absolute;
+  width: 2rem;
+  height: 0.23rem;
+  border-radius: 2px;
+  background-color: #BFBDAC;
+  display: block;
+  margin: auto;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  content: "";
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: rotate(0deg) translateY(10px);
+          transform: rotate(0deg) translateY(10px);
+}
+
+.main-btn.active .custom-menu-toggle {
+  background-color: rgba(255, 255, 255, 0);
+}
+.main-btn.active .custom-menu-toggle:before {
+  position: absolute;
+  width: 2rem;
+  height: 0.23rem;
+  border-radius: 2px;
+  background-color: #BFBDAC;
+  display: block;
+  margin: auto;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  content: "";
+  -webkit-transform: rotate(45deg) translateY(0px);
+          transform: rotate(45deg) translateY(0px);
+}
+.main-btn.active .custom-menu-toggle:after {
+  position: absolute;
+  width: 2rem;
+  height: 0.23rem;
+  border-radius: 2px;
+  background-color: #BFBDAC;
+  display: block;
+  margin: auto;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  content: "";
+  -webkit-transform: rotate(-45deg) translateY(0px);
+          transform: rotate(-45deg) translateY(0px);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+body {
+  background: url("../img/BACKGROUND_DARK.png");
+}
+
+.wraper {
+  overflow: hidden;
+  padding: 0 16px;
+}
+
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 15px 0 20px 0;
+}
+.header-container .logo {
+  max-width: 130px;
+}
+.header-container .logo img {
+  width: 100%;
+}
+.header-container .shop-link {
+  width: 103px;
+}
+.header-container .shop-link img {
+  width: 100%;
+}
+.header-container .shop-link-non-active {
+  visibility: hidden;
+}
+.header-container .header-inner-links {
+  display: none;
+}
+.header-container .header-inner-links ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.header-container .header-inner-links ul li a {
+  padding: 30px 0 30px 0;
+  display: block;
+  font-family: "Space-Mono-Regular";
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #ACA59B;
+}
+
+.header-links {
+  display: none;
+  position: absolute;
+  width: 95%;
+  top: 55px;
+  background: url("../img/BACKGROUND_DARK.png") no-repeat;
+}
+.header-links ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.header-links ul li a {
+  padding: 30px 0 30px 0;
+  display: block;
+  font-family: "Space-Mono-Regular";
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #ACA59B;
+}
+
+.is-active {
+  display: block;
+}
+
+.main-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 626px;
+  width: 100%;
+  margin-bottom: 104px;
+  background: url("../img/medieval_elements_background.svg") 50% no-repeat;
+}
+.main-info h1 {
+  font-family: "Girassol-Regular";
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 100%;
+  color: #BFBDAC;
+  margin-bottom: 15px;
+}
+.main-info h3 {
+  width: 320px;
+  font-family: "Space-Mono-Regular";
+  font-size: 13px;
+  line-height: 19px;
+  color: #BFBDAC;
+}
+
+.medieval-games {
+  margin-bottom: 200px;
+}
+.medieval-games h2 {
+  font-family: "Girassol-Regular";
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #786B55;
+  margin-bottom: 32px;
+}
+.medieval-games .game {
+  border-top: 2px solid #ACA59B;
+}
+.medieval-games .game .top .game-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 10px 0 10px 0;
+}
+.medieval-games .game .top .game-section .count {
+  font-family: "Space-Mono-Bold";
+  font-size: 13px;
+  line-height: 120%;
+  color: #ACA59B;
+  margin-right: 30px;
+  margin-left: 5%;
+}
+.medieval-games .game .top .game-section .game-pic {
+  width: 64px;
+  margin-right: 30px;
+}
+.medieval-games .game .top .game-section .game-pic img {
+  width: 100%;
+  border-radius: 15px;
+}
+.medieval-games .game .top .game-section .game-tittle {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.medieval-games .game .top .game-section .game-tittle .name-of-game {
+  font-family: "Girassol-Regular";
+  font-size: 25px;
+  line-height: 120%;
+  color: #ACA59B;
+}
+.medieval-games .game .top .game-section-active {
+  border-bottom: unset;
+  padding: 13px 0 13px 0;
+}
+.medieval-games .game .top .game-section-active .game-tittle,
+.medieval-games .game .top .game-section-active .game-pic {
+  display: none;
+}
+.medieval-games .game .top .game:hover {
+  background-color: #786B55;
+}
+.medieval-games .game .top:hover {
+  background-color: #786B55;
+}
+.medieval-games .game .about-game {
+  display: none;
+}
+.medieval-games .game .about-game .gallery {
+  padding: 0 0 97px 0;
+}
+.medieval-games .game .about-game .gallery .slick-list {
+  q: visible;
+  padding: unset;
+}
+.medieval-games .game .about-game .gallery .slick-slide {
+  margin: 0 15px 0 0;
+}
+.medieval-games .game .about-game .gallery .slick-slide img {
+  border-radius: 20px;
+}
+.medieval-games .game .about-game .gallery .slick-next {
+  right: 25px;
+  top: unset;
+  bottom: 30px;
+}
+.medieval-games .game .about-game .gallery .slick-next::before {
+  font-family: "FontAwesome", "Font Awesome 5 Brands", "Font Awesome 6 Free";
+  content: "\f105";
+  font-size: 30px;
+  color: #ACA59B;
+}
+.medieval-games .game .about-game .gallery .slick-prev {
+  left: unset;
+  right: 80px;
+  top: unset;
+  z-index: 2;
+  bottom: 30px;
+}
+.medieval-games .game .about-game .gallery .slick-prev::before {
+  font-family: "FontAwesome", "Font Awesome 5 Brands", "Font Awesome 6 Free";
+  content: "\f104";
+  font-size: 30px;
+  color: #ACA59B;
+}
+.medieval-games .game .about-game .gallery .slick-dots {
+  text-align: end;
+  bottom: 60px;
+}
+.medieval-games .game .about-game .gallery .slick-dots li {
+  margin: 0 2px;
+}
+.medieval-games .game .about-game .gallery .slick-dots li button:before {
+  content: "";
+  width: 20px;
+  height: 3px;
+  background-color: #ACA59B;
+}
+.medieval-games .game .about-game .gallery .slick-dots .slick-active li {
+  width: 10px;
+}
+.medieval-games .game .about-game .gallery .slick-dots .slick-active li button:before {
+  content: "";
+  width: 20px;
+  height: 3px;
+  background-color: #ACA59B;
+}
+.medieval-games .game .game-info {
+  position: relative;
+}
+.medieval-games .game .game-info .game-relative-pic {
+  position: absolute;
+  top: -160px;
+  left: 5%;
+  border-radius: 21px;
+}
+.medieval-games .game .game-info .game-relative-pic img {
+  border-radius: 20px;
+  height: 128px;
+}
+.medieval-games .game .is-active {
+  font-family: "Space-Mono-Regular";
+  display: block;
+  font-size: 13px;
+  line-height: 19px;
+}
+.medieval-games .game .name-of-game {
+  font-family: "Girassol-Regular";
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 120%;
+  color: #ACA59B;
+}
+.medieval-games .game .type-of-game {
+  font-family: "Space-Mono-Bold";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  color: #ACA59B;
+}
+.medieval-games .game .discription {
+  font-family: "Space-Mono-Bold";
+  font-size: 13px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: #ACA59B;
+  margin-bottom: 30px;
+}
+.medieval-games .game .game-rules {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: uppercase;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+  line-height: 19px;
+  text-transform: uppercase;
+  font-family: "Space-Mono-Regular";
+  color: #ACA59B;
+  margin-bottom: 30px;
+}
+.medieval-games .game .game-rules div {
+  text-align: center;
+  border-right: 1px solid #ACA59B;
+  width: 33%;
+  padding: 5px 0 5px 0;
+}
+.medieval-games .game .game-rules div:first-child {
+  border-left: 1px solid #ACA59B;
+}
+.medieval-games .game .how-to-play {
+  font-family: "Space-Mono-Regular";
+  color: #ACA59B;
+}
+.medieval-games .game .how-to-play p {
+  margin-bottom: 20px;
+}
+.medieval-games .game .how-to-play p:last-of-type {
+  margin-bottom: 50px;
+}
+.medieval-games .game .game-link {
+  text-align: center;
+  display: block;
+  padding: 23px 20px 23px 20px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  background: url(../img/link-btn.svg) 50% 100%/contain no-repeat;
+  font-size: 16px;
+  line-height: 100%;
+  font-family: "Almendra-Regular";
+  margin-bottom: 60px;
+}
+.medieval-games .game:last-child {
+  border-bottom: 2px solid #ACA59B;
+}
+
+.deusLoVult {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 350px;
+  margin: 0 auto;
+  margin-bottom: 194px;
+}
+.deusLoVult .game-pic-first {
+  text-align: end;
+  height: 183px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.deusLoVult .game-pic-first img {
+  border-radius: 20px;
+  height: 100%;
+}
+.deusLoVult .game-pic-second {
+  width: 50%;
+}
+.deusLoVult .game-pic-second img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 165px;
+  height: 333px;
+  border-radius: 10px;
+}
+.deusLoVult .game-about {
+  width: 50%;
+}
+.deusLoVult .game-about h3 {
+  font-family: "Girassol-Regular";
+  font-size: 30px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #BFBDAC;
+  margin-bottom: 20px;
+}
+.deusLoVult .game-about p {
+  font-family: "Almendra-Regular";
+  font-size: 13px;
+  line-height: 17px;
+  color: #BFBDAC;
+}
+
+.recomended {
+  margin-bottom: 245px;
+}
+.recomended h2 {
+  font-family: "Girassol-Regular";
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #786B55;
+  margin-bottom: 32px;
+}
+.recomended .games-container .game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #ACA59B;
+}
+.recomended .games-container .game a {
+  text-decoration: none;
+  color: #ACA59B;
+  padding: 28px 0 28px 15%;
+}
+.recomended .games-container .game a .name-of-game {
+  font-family: "Girassol-Regular";
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 120%;
+}
+.recomended .games-container .game a .type {
+  font-family: "Space-Mono-Regular";
+}
+.recomended .games-container .game:last-child {
+  border-bottom: 1px solid #ACA59B;
+}
+.recomended .games-container .game:hover {
+  background: url("../img/game-link-background.svg");
+}
+
+.footer {
+  position: relative;
+}
+.footer .shop-section {
+  margin-bottom: 100px;
+}
+.footer .shop-section h2 {
+  font-family: "Girassol-Regular";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  color: #ACA59B;
+  margin-bottom: 56px;
+}
+.footer .shop-section .buy-link {
+  display: block;
+  padding: 23px 50px 23px 50px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  background: url("../img/link-btn.svg") no-repeat;
+}
+.footer .info-box {
+  margin-bottom: 44px;
+}
+.footer .info-box h3 {
+  font-family: "Girassol-Regular";
+  font-size: 20px;
+  line-height: 170%;
+  color: #ACA59B;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.footer .info-box .about-links li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.footer .info-box .about-links li a {
+  font-family: "Space-Mono-Regular";
+  font-size: 13px;
+  line-height: 170%;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: #ACA59B;
+}
+.footer .arrow {
+  position: absolute;
+  bottom: 100px;
+  right: 15px;
+}
+.footer .footer-links {
+  padding: 20px 0 30px 0;
+  border-top: 1px solid #ACA59B;
+}
+.footer .footer-links ul {
+  display: none;
+}
+.footer .footer-links ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer .footer-links ul li a {
+  padding: 30px 0 30px 0;
+  display: block;
+  font-family: "Space-Mono-Regular";
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #ACA59B;
+}
+.footer .footer-links p {
+  font-family: "Space-Mono-Regular";
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #ACA59B;
+}
+
+@media (min-width: 767px) {
+  .wraper {
+    padding: 0 35px;
+  }
+
+  .main-info {
+    margin-bottom: 237px;
+    background: url(../img/medieval_elements_background.svg) 48% 50%/cover no-repeat;
+  }
+  .main-info h1 {
+    font-size: 100px;
+  }
+  .main-info h3 {
+    width: 630px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .medieval-games .game .top .game-section .game-pic {
+    margin-right: 60px;
+    width: 104px;
+  }
+  .medieval-games .game .top .game-section .game-tittle .name-of-game {
+    font-size: 45px;
+  }
+  .medieval-games .game .top .game-section-active {
+    padding: 25px 0 25px 0;
+  }
+  .medieval-games .game .about-game .game-info {
+    height: 600px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    width: 100%;
+  }
+  .medieval-games .game .about-game .game-info .type-of-game,
+.medieval-games .game .about-game .game-info .name-of-game,
+.medieval-games .game .about-game .game-info .discription,
+.medieval-games .game .about-game .game-info .game-rules,
+.medieval-games .game .about-game .game-info .how-to-play {
+    width: 47%;
+  }
+  .medieval-games .game .about-game .game-info .game-relative-pic {
+    top: -230px;
+  }
+  .medieval-games .game .about-game .game-info .game-relative-pic img {
+    height: 214px;
+  }
+  .medieval-games .game .about-game .type-of-game {
+    margin-bottom: 15px;
+  }
+  .medieval-games .game .about-game .name-of-game {
+    margin-bottom: 40px;
+  }
+  .medieval-games .game .about-game .how-to-play {
+    margin-top: 60px;
+  }
+  .medieval-games .game .about-game .how-to-play {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .medieval-games .game .about-game .buy-link {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .medieval-games .game .about-game .gallery .slick-dots li {
+    width: 50px;
+  }
+  .medieval-games .game .about-game .gallery .slick-dots li button:before {
+    width: 50px;
+  }
+
+  .deusLoVult {
+    width: 698px;
+  }
+  .deusLoVult .game-pic-first {
+    margin-right: 20%;
+    height: 100%;
+  }
+  .deusLoVult .game-pic-first img {
+    height: 217px;
+  }
+  .deusLoVult .game-pic-second,
+.deusLoVult .about-game {
+    width: 46%;
+  }
+  .deusLoVult .game-pic-second {
+    margin-right: auto;
+  }
+  .deusLoVult .game-pic-second img {
+    width: 100%;
+    height: 648px;
+  }
+
+  .recomended .games-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .recomended .games-container .game {
+    width: 50%;
+  }
+  .recomended .games-container .game a {
+    padding: 109px 0 109px 20%;
+  }
+  .recomended .games-container .game:nth-of-type(3) {
+    border-right: 1px solid #ACA59B;
+    border-bottom: 1px solid #ACA59B;
+  }
+  .recomended .games-container .game:nth-of-type(1) {
+    border-right: 1px solid #ACA59B;
+  }
+
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer .shop-section {
+    width: 100%;
+  }
+  .footer .shop-section h2 {
+    width: 50%;
+    font-size: 50px;
+  }
+  .footer .info-box {
+    width: 50%;
+  }
+  .footer .arrow {
+    cursor: pointer;
+    position: absolute;
+    bottom: 100px;
+    right: 30px;
+  }
+  .footer .footer-links {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 0 10px 0;
+  }
+  .footer .footer-links ul {
+    display: block;
+    width: 40%;
+  }
+}
+@media (min-width: 1079px) {
+  .wraper {
+    padding: 0 100px;
+  }
+
+  .header-container {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .header-container .logo {
+    max-width: 215px;
+  }
+  .header-container .header-inner-links {
+    display: block;
+    width: 50%;
+  }
+  .header-container .main-app {
+    display: none;
+  }
+  .header-container .shop-link {
+    width: 155px;
+  }
+
+  .main-info {
+    background: url(../img/medieval_elements_background.svg) 50% no-repeat;
+  }
+
+  .medieval-games h2 {
+    font-size: 60px;
+  }
+  .medieval-games .game .top .game-section .count {
+    font-size: 16px;
+  }
+  .medieval-games .game .top .game-section .game-pic {
+    margin-right: 140px;
+    width: 130px;
+  }
+  .medieval-games .game .top .game-section .game-tittle .name-of-game {
+    font-size: 65px;
+  }
+  .medieval-games .game .top .game-section .game-tittle .type-of-game {
+    font-size: 20px;
+  }
+  .medieval-games .game .about-game {
+    height: 1500px;
+  }
+  .medieval-games .game .about-game .gallery {
+    padding: 0 0 65px 0;
+  }
+  .medieval-games .game .about-game .gallery .slick-prev,
+.medieval-games .game .about-game .gallery .slick-next {
+    bottom: 0;
+    bottom: -25px;
+  }
+  .medieval-games .game .about-game .gallery .slick-dots {
+    bottom: 10px;
+  }
+  .medieval-games .game .about-game .gallery .slick-dots li {
+    width: 70px;
+    margin: 0 5px;
+  }
+  .medieval-games .game .about-game .gallery .slick-dots li button:before {
+    width: 70px;
+  }
+  .medieval-games .game .about-game .game-info {
+    margin-left: auto;
+    width: 70%;
+    height: 650px;
+  }
+  .medieval-games .game .about-game .game-info h3 {
+    font-size: 65px;
+  }
+  .medieval-games .game .about-game .game-info .game-relative-pic {
+    top: -130px;
+    left: -237px;
+  }
+  .medieval-games .game .about-game .game-info .game-relative-pic img {
+    height: 217px;
+    border-radius: 20px;
+  }
+  .medieval-games .game .about-game .game-info .type-of-game {
+    font-size: 20px;
+  }
+  .medieval-games .game .about-game .game-info .name-of-game {
+    font-size: 65px;
+  }
+  .medieval-games .game .about-game .game-info .discription {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .medieval-games .game .about-game .game-info .game-rules {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .medieval-games .game .about-game .game-info .how-to-play {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .medieval-games .game .about-game .game-info .game-link {
+    background: url(../img/link-btn.svg) 100%/contain no-repeat;
+    padding: 34px 0;
+    margin: 2px 0;
+  }
+
+  .deusLoVult {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+  .deusLoVult .game-about {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 77%;
+    text-align: end;
+  }
+  .deusLoVult .game-about h3 {
+    font-size: 130px;
+    line-height: 120%;
+  }
+  .deusLoVult .game-about p {
+    line-height: 21px;
+    text-align: start;
+    font-size: 16px;
+    margin-left: auto;
+    width: 350px;
+  }
+  .deusLoVult .game-pic-first {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin: unset;
+    width: 20%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: auto;
+  }
+  .deusLoVult .game-pic-second {
+    margin-top: 70px;
+    width: 77%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .deusLoVult .game-pic-second img {
+    height: 369px;
+  }
+
+  .recomended h2 {
+    font-size: 60px;
+  }
+  .recomended .games-container .game a .name-of-game {
+    font-size: 65px;
+  }
+  .recomended .games-container .game a .type {
+    font-size: 16px;
+  }
+
+  .footer .shop-section {
+    width: 50%;
+  }
+  .footer .info-box {
+    width: 25%;
+  }
+  .footer .info-box .about-links li a {
+    font-size: 16px;
+  }
+  .footer .arrow {
+    position: absolute;
+    bottom: 180px;
+  }
+  .footer .footer-links ul {
+    width: 25%;
+  }
+  .footer .footer-links ul li a {
+    padding: 50px 0 50px 0;
+  }
+}
+@media (min-width: 1600px) {
+  .wraper {
+    margin: 0 auto;
+    max-width: 1600px;
+  }
+}

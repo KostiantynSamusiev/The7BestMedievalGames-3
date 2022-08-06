@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Girassol-Regular';
+    src: url('../fonts/Girassol-Regular.woff2'),
+        url('../fonts/Girassol-Regular.woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Almendra-Regular';
+    src: url('../fonts/Almendra-Regular.woff'),
+        url('../fonts/Almendra-Regular.woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Space-Mono-Regular';
+    src: url('../fonts/SpaceMono-Regular.woff'),
+        url('../fonts/SpaceMono-Regular.woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Space-Mono-Bold';
+    src: url('../fonts/SpaceMono-Bold.woff'),
+        url('../fonts/SpaceMono-Bold.woff2');
+    font-weight: 700;
+    font-style: normal;
+}
